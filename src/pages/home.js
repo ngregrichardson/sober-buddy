@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
+/**
+ * The home page with general information about Sober Buddy
+ */
 export default class Home extends Component {
+  /**
+   * Run before component renders for the first time
+   */
   componentDidMount() {
+    // Set the title of the page
     document.title = "Home | Sober Buddy";
   }
 

@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
+/**
+ * The tracker page with information about the 12 next steps
+ */
 export default class Tracker extends Component {
+  /**
+   * Run before component renders for the first time
+   */
   componentDidMount() {
+    // Set the title of the page
     document.title = "Tracker | Sober Buddy";
   }
 

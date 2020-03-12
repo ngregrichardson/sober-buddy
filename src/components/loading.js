@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 
+/**
+ * A fullscreen loading animation
+ */
 export default class Loading extends Component {
   state = { loading: this.props.loading };
 
+  /**
+   * Update the state when/if the props change
+   * @param props - The new props
+   * @param state - The current state
+   * @returns {{}|null} - The state values to update
+   */
   static getDerivedStateFromProps(props, state) {
     let propsToUpdate = {};
     if (props.loading !== state.loading) {

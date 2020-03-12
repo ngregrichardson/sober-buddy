@@ -5,11 +5,20 @@ import { withRouter } from "react-router";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
+/**
+ * The nav bar using React Router
+ */
 class NavBar extends Component {
   state = {
     authed: this.props.authed || false
   };
 
+  /**
+   * Update the state when/if the props change
+   * @param props - The new props
+   * @param state - The current state
+   * @returns {{}|null} - The state values to update
+   */
   static getDerivedStateFromProps(props, state) {
     let propsToUpdate = {};
     if (props.authed !== state.authed) {
@@ -21,11 +30,15 @@ class NavBar extends Component {
     return null;
   }
 
+  /**
+   * Log the user out
+   */
   handleLogout = () => {
+    // Log out of firebase
     firebase
       .auth()
       .signOut()
-      .then(() => this.props.history.push("/"));
+      .then(() => this.props.history.push("/")); // Navigate to the home page
   };
 
   render() {
@@ -110,6 +123,12 @@ class NavBar extends Component {
   }
 }
 
+/**
+ * Load the Redux state into props
+ * @param state - The Redux state
+ * @param ownProps - The component's props
+ * @returns {Object} - The proposed state
+ */
 let mapStateToProps = (state, ownProps) => {
   return {
     ...ownProps,

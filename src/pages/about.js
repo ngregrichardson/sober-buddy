@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
+/**
+ * The about page with information about the Sober Buddy project
+ */
 export default class About extends Component {
+  /**
+   * Run before component renders for the first time
+   */
   componentDidMount() {
+    // Set the title of the page
     document.title = "About | Sober Buddy";
   }
 

@@ -6,6 +6,9 @@ import "firebase/firestore";
 import moment from "moment";
 import Loading from "../components/loading";
 
+/**
+ * The register page to create new accounts
+ */
 class Register extends Component {
   state = {
     username: "",
@@ -16,29 +19,47 @@ class Register extends Component {
     loading: false
   };
 
+  /**
+   * Run before component renders for the first time
+   */
   componentDidMount() {
+    // Set the title of the page
     document.title = "Register | Sober Buddy";
   }
 
+  /**
+   * Update a value in the state when it is changed
+   * @param {string} key - The key of the value to update
+   * @param {string} value - The value to update
+   */
   handleValueChange = (key, value) => {
     let toChange = {};
     toChange[key] = value;
     this.setState(toChange);
   };
 
+  /**
+   * Register the user
+   */
   handleRegister = () => {
+    // Start loading
     this.setState({ loading: true });
     let { username, email, password, confirmPassword } = this.state;
+    // If not all fields are filled out
     if (
       username.trim() === "" ||
       password.trim() === "" ||
       email.trim() === ""
     ) {
+      // Display error
       return this.setState({ statusMessage: "Fill out all fields" });
     }
-    if (password.trim() !== confirmPassword.trim() || password.trim() === "") {
+    // If the password and confirm password don't match
+    if (password.trim() !== confirmPassword.trim()) {
+      // Display error
       return this.setState({ statusMessage: "Passwords must match" });
     }
+    // If the email is not a valid email
     if (
       !email.includes("@") ||
       !email
@@ -47,12 +68,15 @@ class Register extends Component {
         .includes(".") ||
       email.split("@")[1].trim() === ""
     ) {
+      // Display error
       return this.setState({ statusMessage: "Must provide a valid email" });
     }
+    // Create a new user
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(userData => {
+        // Create a user in the database
         firebase
           .firestore()
           .collection("users")
@@ -63,13 +87,23 @@ class Register extends Component {
             uid: userData.user.uid,
             started: moment().toISOString()
           })
-          .then(() => this.props.history.push("/profile"));
+          .then(() => this.props.history.push("/profile")) // Navigate to profile
+          .catch(e => {
+            // Display error
+            this.setState({ statusMessage: e.message, loading: false });
+          });
       })
       .catch(e => {
+        // Display error
         this.setState({ statusMessage: e.message, loading: false });
       });
   };
 
+  /**
+   * Submit the form when the enter key is pressed
+   * @param e
+   * @private
+   */
   _handleKeyDown = e => {
     if (e.key === "Enter") {
       this.handleRegister();

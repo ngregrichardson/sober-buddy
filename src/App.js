@@ -25,28 +25,28 @@ function App() {
       <Provider template={AlertTemplate} {...alertOptions}>
         <NavBar />
         <Switch>
-          <Route exact path={"/"}>
+          <Route exact path={process.env.PUBLIC_URL + "/"}>
             <Home />
           </Route>
-          <Route path={"/tracker"}>
+          <Route path={process.env.PUBLIC_URL + "/tracker"}>
             <Tracker />
           </Route>
-          <Route path={"/forum"}>
+          <Route path={process.env.PUBLIC_URL + "/forum"}>
             <Forum />
           </Route>
-          <Route path={"/about"}>
+          <Route path={process.env.PUBLIC_URL + "/about"}>
             <About />
           </Route>
-          <Route path={"/support"}>
+          <Route path={process.env.PUBLIC_URL + "/support"}>
             <Support />
           </Route>
-          <Route path={"/login"}>
+          <Route path={process.env.PUBLIC_URL + "/login"}>
             <Login />
           </Route>
-          <Route path={"/register"}>
+          <Route path={process.env.PUBLIC_URL + "/register"}>
             <Register />
           </Route>
-          <Route path={"/profile"}>
+          <Route path={process.env.PUBLIC_URL + "/profile"}>
             <Profile />
           </Route>
           <Route component={FourOFour} />

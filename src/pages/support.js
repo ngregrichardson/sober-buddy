@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
+/**
+ * The support page to send support messages
+ */
 export default class Support extends Component {
+  /**
+   * Run before component renders for the first time
+   */
   componentDidMount() {
+    // Set the title of the page
     document.title = "Support | Sober Buddy";
   }
 
