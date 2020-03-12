@@ -12,6 +12,7 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Profile from "./pages/profile";
 import FourOFour from "./pages/FourOFour";
+import Footer from "./components/footer";
 
 // Options for the alerts
 const alertOptions = {
@@ -21,36 +22,41 @@ const alertOptions = {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Provider template={AlertTemplate} {...alertOptions}>
-        <NavBar />
-        <Switch>
-          <Route exact path={process.env.PUBLIC_URL + "/"}>
-            <Home />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/tracker"}>
-            <Tracker />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/forum"}>
-            <Forum />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/about"}>
-            <About />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/support"}>
-            <Support />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/login"}>
-            <Login />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/register"}>
-            <Register />
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/profile"}>
-            <Profile />
-          </Route>
-          <Route component={FourOFour} />
-        </Switch>
+        <div id={"mainContainer"}>
+          <div id={"main"}>
+            <NavBar />
+            <Switch>
+              <Route exact path={"/"}>
+                <Home />
+              </Route>
+              <Route path={"/tracker"}>
+                <Tracker />
+              </Route>
+              <Route path={"/forum"}>
+                <Forum />
+              </Route>
+              <Route path={"/about"}>
+                <About />
+              </Route>
+              <Route path={"/support"}>
+                <Support />
+              </Route>
+              <Route path={"/login"}>
+                <Login />
+              </Route>
+              <Route path={"/register"}>
+                <Register />
+              </Route>
+              <Route path={"/profile"}>
+                <Profile />
+              </Route>
+              <Route component={FourOFour} />
+            </Switch>
+          </div>
+        </div>
+        <Footer />
       </Provider>
     </Router>
   );

@@ -11,6 +11,7 @@ export default class FourOFour extends Component {
           Sorry, we couldn't find that page
         </h1>
         <img
+          alt={"logo"}
           src={"/logo.png"}
           style={{
             display: "block",
