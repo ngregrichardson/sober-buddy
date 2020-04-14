@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ee300676-2d0c-4f59-b7b0-f2c0b1ed8494" name="Default Changelist" comment="feat: Update README, begin deployment process">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +43,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -35,6 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -103,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584026234460</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix: Remove .env">
+      <created>1586879799171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586879799171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Update README, begin deployment process" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update README, begin deployment process" />
+    <MESSAGE value="fix: Remove .env" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Remove .env" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583973736561">
@@ -161,10 +185,18 @@
     </state>
     <state width="1897" height="243" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1584026066050" />
     <state width="1897" height="214" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1583991810824" />
+    <state x="2614" y="173" width="521" height="758" key="RollbackChangesDialog" timestamp="1586879777613">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2614" y="173" width="521" height="758" key="RollbackChangesDialog/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1586879777613" />
     <state x="449" y="187" key="SettingsEditor" timestamp="1583973508741">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="449" y="187" key="SettingsEditor/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1583973508741" />
+    <state x="2475" y="270" width="800" height="565" key="Vcs.Push.Dialog.v2" timestamp="1586879800448">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="270" width="800" height="565" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1586879800448" />
     <state x="598" y="247" width="925" height="610" key="find.popup" timestamp="1584024433384">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
