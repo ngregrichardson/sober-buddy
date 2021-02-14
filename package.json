@@ -1,15 +1,14 @@
 {
-  "name": "627-remake",
-  "version": "0.1.0",
+  "name": "sober-buddy",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://ngregrichardson.github.io",
+  "homepage": "https://soberbuddy.iamnoah.dev",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
     "firebase": "^7.10.0",
-    "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
     "prettier": "^1.19.1",
     "react": "^16.13.0",
@@ -26,9 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -b master -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
