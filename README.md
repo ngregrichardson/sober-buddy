@@ -1,4 +1,11 @@
 # Sober Buddy
+
+## About
+
+I made sober buddy in just under 5 hours to challenge myself to see how fast I could remake a friend's project.
+
+---
+
 **Your personal Alcoholics Anonymous companion**
 
 **"The sway of alcohol over mankind is unquestionably due to its power to stimulate the mystical faculties of human nature, usually crushed to earth by the cold facts and dry criticisms of the sober hour."**
